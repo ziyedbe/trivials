@@ -29,17 +29,17 @@ def mostuserchar(ch):
 
 	keys=list(chars.keys())
 	for i in ch:
-		if(i.lower() in keys): #We made this condition to avoid characters such as space and ., etc
-			#We add value to the dictionary 
+		if(i.lower() in keys): #This condition is to avoid characters such as space and ., etc
+			#Increment dictionary value 
 			chars[i.lower()]=chars[i.lower()]+1
 	values = list(chars.values())
-	return keys[values.index(max(values))] # We returned the index of the most used letter
+	return keys[values.index(max(values))] #Return the index of the most used letter
 
 def caesar(ch):
-	#We start by getting the most used letter in out string
+	#Get the most used letter in out string
 	letter = mostuserchar(ch)
 	output=""
-	#We calculate the shift because we knows that the most used letter in english is e
+	#Calculate the shift because we knows that the most used letter in english is e
 	shift = ord(letter)-ord("e")
 	
 	for i in ch:
